@@ -3,16 +3,15 @@ import './index.css';
 import Header from './components/Header';
 
 import About from './components/About';
-import Work from './components/Work';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="project-app">
+    <div className="portfolio-app">
       <Header />
       <About />
-      <Work />
-      <Contact />
+
     </div>
   );
 }

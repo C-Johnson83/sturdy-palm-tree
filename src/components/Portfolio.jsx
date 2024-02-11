@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Work() {
+function Portfolio() {
   return (
     <section className="box" id="Work">
       <h3>Work</h3>
@@ -25,4 +25,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default Portfolio;

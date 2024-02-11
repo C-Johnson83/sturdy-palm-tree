@@ -1,10 +1,10 @@
 /* Define custom CSS variables */
 :root {
-  --color1: #4d4c4c;
+  --color1: #43ec34;
   /* Background color 1 */
-  --color2: #000000;
+  --color2: #208d05;
   /* Background color 2 */
-  --accent: #277287;
+  --accent: #278762;
   /* Accent color */
 }
 
@@ -38,12 +38,12 @@ ul li a:hover {
 /* Styles for the header section */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   align-items: center;
   padding: 2%;
   background-image: linear-gradient(to top, var(--color1), var(--color2));
   color: #000000;
-  max-height: 75px;
+  max-height: 100px;
 }
 
 /* Styles for the name box in the header */
@@ -62,7 +62,7 @@ header {
 /* Styles for the 'me' element */
 .me {
   border-radius: 40%;
-  max-height: 300px;
+  max-height: 150px;
   border-style: double;
   border-width: 5px;
   border-color: var(--color2);
@@ -87,24 +87,6 @@ main {
   background-image: url("./images/shapes.jpg");
 }
 
-/* Styles for the 'captionBox' element */
-.captionBox {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 150px;
-  width: auto;
-  height: 250px;
-}
-
-/* Styles for the 'caption' element */
-.caption {
-  background-color: var(--accent);
-  margin: 2px;
-  padding: 5px;
-  border: double;
-  border-color: black;
-  border-width: 5px;
-}
 
 /* Styles for the 'box' section */
 .box {
