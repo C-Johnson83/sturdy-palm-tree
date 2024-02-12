@@ -1,9 +1,11 @@
+// App.js
 import { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/Project';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 import './index.css';
 
 const componentsByPage = {
@@ -24,10 +26,11 @@ const App = () => {
 
   return (
     <div>
-      <Header currentPage={currentPage} handleNavigationClick={handleNavigationClick} />
+      <Header handleNavigationClick={handleNavigationClick} />
       <main>
         {CurrentComponent && <CurrentComponent />}
       </main>
+      <Footer />
     </div>
   );
 };

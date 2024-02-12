@@ -10,10 +10,33 @@
 
 /* Apply common styles to all of the elements */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   list-style: none;
 }
 
+/* Styles for the main content area */
+html {
+  background-image: linear-gradient(to bottom, var(--color1), var(--color2));
+}
+
+main {
+  min-height: 600px;
+}
+
+/* Styles for the header section */
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  max-height: 20%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  max-height: 10%;
+}
 
 /* Styles for the unordered lists */
 ul {
@@ -36,92 +59,50 @@ ul li a:hover {
   color: var(--accent);
 }
 
-/* Styles for the header section */
-header {
-  display: flex;
-  justify-content:flex-start;
-  align-items: center;
-  padding: 2%;
-  background-image: linear-gradient(to top, var(--color1), var(--color2));
-  color: #000000;
-  max-height: 100px;
-}
 
 /* Styles for the name box in the header */
 .hName {
   display: flex;
+  flex-direction: column;
   align-items: center;
   color: #000000;
   background-color: var(--accent);
-  margin: 2px;
+  margin-bottom: 20px;
   padding: 5px;
   border: double;
   border-color: black;
   border-width: 5px;
 }
 
+.linkName {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: #000000;
+  background-color: var(--accent);
+  margin: 20px;
+  padding: 15px;
+  border: double;
+  border-color: black;
+  border-width: 5px;
+
+}
+
 /* Styles for the 'me' element */
 .me {
-  border-radius: 40%;
+  border-radius: 30%;
   max-height: 150px;
+  max-width: 150px;
   border-style: double;
   border-width: 5px;
   border-color: var(--color2);
 }
 
-/* Styles for the body section */
-body {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.3;
-}
 
-/* Styles for the main content area */
-main {
-  background-image: linear-gradient(to bottom, var(--color1), var(--color2));
-}
-
-/* Styles for the 'picture' element */
-.picture {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-/* Styles for the 'box' section */
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: var(--accent) solid 7px;
-}
-
-/* Styles for the 'section' element within 'box' */
-.box section {
-  display: flex;
-  max-width: 10%;
-  margin: 2px;
-}
-
-/* Styles for the 'aside' element within 'box' */
-.box aside {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 2px;
-  font-size: 100%;
-  border-left: var(--accent) solid 7px;
-}
-
-/* Styles for the 'figure' element */
-.box figure {
-  font-size: 200%;
-  margin: 2px;
-}
 
 /* Styles for paragraphs */
 p {
+  color: #fff;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -129,12 +110,6 @@ p {
   font-weight: bold;
 }
 
-/* Styles for specific elements that have IDs */
-#contactMe h3,
-#contactMe h4,
-#contactMe p {
-  color: #fff;
-}
 /* Styles for the container of repository cards */
 .card-container {
   display: flex;
@@ -147,8 +122,9 @@ p {
 /* Styles for each repository card */
 .card {
   background-color: #fff;
-  width: calc(33.33% - 20px); /* Adjust the width as needed */
-  margin-bottom: 20px;
+  width: calc(33.33% - 40px);
+  height: 300px;
+  margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -158,9 +134,9 @@ p {
 /* Styles for pagination */
 .pagination {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .page-link {
@@ -175,118 +151,4 @@ p {
   background-color: #007bff;
   color: white;
   border: 1px solid #007bff;
-}
-@media screen and (max-width: 1000px) {
-
-  /* Remove padding for main content */
-  main {
-    padding: 0;
-  }
-
-  /* Stack elements vertically in the "box" section */
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .box aside {
-    border: none;
-  }
-
-  /* Adjust image styles for smaller screens and ensure images don't exceed their container */
-  .imgBig,
-  .imgRow {
-    max-width: 100%;
-  }
-
-  .imgRow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imgRow a {
-    max-width: 100%;
-  }
-
-  /* Adjust "p" element padding */
-  p {
-    padding: 20px;
-  }
-
-  /*  adjust the contact links for smaller screens */
-  .contactLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 20px;
-
-  }
-}
-
-
-@media screen and (max-width: 700px) {
-
-  /* Adjust header nav list and main for smaller screens */
-  header nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-    padding: 5px;
-  }
-
-  /* Remove padding for main content */
-  main {
-    padding: 0;
-  }
-/*Adjust the max-height of the me element
-  .me {
-
-    max-height: 200px;
-  }
-
-  /* Stack elements vertically in the "box" section */
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Adjust image styles for smaller screens and ensure images don't exceed their container */
-  .imgRow {
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imgRow a {
-    max-width: 80%;
-  }
-
-  /* Adjust "p" element padding */
-  p {
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-
-  /* Adjust the contact links for smaller screens */
-  .contactLinks {
-    margin: 5px;
-    padding: 5px;
-    font-size: 80%;
-  }
-/* Adjust the font size for smaller screen */
-  header,
-  .captionBox {
-    font-size: 75%;
-  }
 }

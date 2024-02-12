@@ -1,24 +1,18 @@
+// Header.js
 import React from 'react';
+import Navigation from './Navigation'; // Import the Navigation component
 
-function Header({ currentPage, handleNavigationClick }) {
+const Header = ({ handleNavigationClick }) => {
   return (
     <header>
-      <section className="picture">
-        <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" />
-      </section>
       <section className="hName">
-        <h1>I am Chris Johnson</h1>
+
+        <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" /><h1>I am Chris Johnson</h1>
       </section>
-      <nav>
-        <ul>
-          <li onClick={() => handleNavigationClick('about')} className={currentPage === 'about' ? 'active' : ''}>About Me</li>
-          <li onClick={() => handleNavigationClick('portfolio')} className={currentPage === 'portfolio' ? 'active' : ''}>Portfolio</li>
-          <li onClick={() => handleNavigationClick('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact Me</li>
-          <li onClick={() => handleNavigationClick('resume')} className={currentPage === 'resume' ? 'active' : ''}>Resume</li>
-        </ul>
-      </nav>
+      {/* Use the Navigation component inside the header */}
+      <Navigation handleNavigationClick={handleNavigationClick} />
     </header>
   );
-}
+};
 
 export default Header;

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function Portfolio() {
+function Project() {
   const [repos, setRepos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 6;
@@ -48,7 +48,7 @@ function Portfolio() {
 
   return (
     <section className="box" id="app-card">
-      <h3>Repo's</h3>
+      <h2>Repo's</h2>
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
@@ -57,9 +57,9 @@ function Portfolio() {
                 {repoHasImage(repo) ? (
                   <img src={`src/assets/images/${repo.name}.jpg`} alt={`${repo.name} image`} />
                 ) : (
-                  <p>No Image</p>
+                  <h3>No Image</h3>
                 )}
-                <p>{repo.name}</p>
+                <h3>{repo.name}</h3>
               </a>
             </figure>
           </div>
@@ -105,4 +105,4 @@ function repoHasImage(repo) {
   }
 }
 
-export default Portfolio;
+export default Project;

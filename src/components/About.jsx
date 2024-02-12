@@ -2,9 +2,10 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="box" id="About">
+    <main>
       <h3>About Me</h3>
-      <aside>
+
+    
       <p>
                     I'm Chris Johnson, an avid RPG enthusiast with an unwavering passion for virtual adventures and a
                     profound love for anime. My favorite anime hands down is the long-running anime series "One Piece,"
@@ -21,8 +22,9 @@ function About() {
                     portfolio below, you'll discover samples of my work spanning HTML, CSS, Javascript, and Data
                     Analytics, showcasing some of my diverse skill set. Please feel free to explore and get in
                     touch—I'm always eager to collaborate and take on new challenges.</p>
-      </aside>
-    </section>
+    
+  
+    </main>
   );
 }
 export default About;
