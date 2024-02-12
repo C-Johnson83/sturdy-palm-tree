@@ -120,51 +120,6 @@ main {
   margin: 2px;
 }
 
-/* Styles for the 'imgBig' element */
-.imgBig {
-  display: flex;
-  align-content: center;
-}
-
-/* Styles for images within 'imgBig' */
-.imgBig img {
-  border-style: solid;
-  border-color: var(--color1);
-  border-width: 5px;
-  margin: 10px;
-  max-width: 90%;
-}
-/* Styles for links within 'imgBig' */
-.imgBig a {
-  font-size: small;
-  color: #fff;
-}
-
-/* Styles for the 'imgRow' element */
-.imgRow {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 10px;
-}
-
-/* Styles for images within 'imgRow' */
-.imgRow img {
-  border-style: solid;
-  border-color: var(--color1);
-  max-width: 100%;
-  margin: 10px;
-  max-width: 2;
-}
-
-/* Styles for links within 'imgRow' */
-.imgRow a {
-  max-width: 50%;
-  text-decoration: none;
-  font-size: small;
-  color: #fff;
-}
-
 /* Styles for paragraphs */
 p {
   display: flex;
