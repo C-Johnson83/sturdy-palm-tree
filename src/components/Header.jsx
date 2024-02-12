@@ -10,14 +10,7 @@ function Header() {
       <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" />
   
     </section>
-      <nav>
-        <ul>
-          <li><a href="#AboutMe">About Me</a></li>
-          <li><a href="#Work">Work</a></li>
-          <li><a href="#ContactMe">Contact Me</a></li>
-          <li><a href="#Resume">Resume</a></li>
-        </ul>
-      </nav>
+   
     </header>
   );
 }
