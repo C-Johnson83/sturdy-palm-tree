@@ -5,16 +5,38 @@ function Portfolio() {
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 6;
 
+  // useEffect(() => {
+  //   fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=1')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setRepos(data);
+  //       console.log(data)
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching repos:', error);
+  //     });
+  // }, []);
+
+
   useEffect(() => {
-    fetch('https://api.github.com/users/c-johnson83/repos')
-      .then(response => response.json())
+    // Fetch repositories from both page 1 and page 2
+    Promise.all([
+      fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=1'),
+      fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=2')
+    ])
+      .then(responses => Promise.all(responses.map(response => response.json())))
       .then(data => {
-        setRepos(data);
+        // Concatenate the repositories from both pages
+        const allRepos = data[0].concat(data[1]);
+        setRepos(allRepos);
+        console.log(allRepos);
       })
       .catch(error => {
         console.error('Error fetching repos:', error);
       });
   }, []);
+
+
 
   // Get current repositories
   const indexOfLastRepo = currentPage * reposPerPage;
@@ -26,7 +48,7 @@ function Portfolio() {
 
   return (
     <section className="box" id="app-card">
-      <h3>Work</h3>
+      <h3>Repo's</h3>
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
