@@ -1,10 +1,10 @@
 /* Define custom CSS variables */
 :root {
-  --color1: #43ec34;
+  --color1: #21501d;
   /* Background color 1 */
-  --color2: #208d05;
+  --color2: #05138d;
   /* Background color 2 */
-  --accent: #278762;
+  --accent: #b2db0e;
   /* Accent color */
 }
 

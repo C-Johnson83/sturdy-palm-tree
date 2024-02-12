@@ -11,6 +11,6 @@ Data Analytics<br>--------------------</br>
             </p>
         </div>
     )
-}
+};
 
 export default Resume;
