@@ -24,21 +24,10 @@ const App = () => {
 
   return (
     <div>
-      <Header />
-    
-      <nav>
-        <ul>
-          <li onClick={() => handleNavigationClick('about')}>About Me</li>
-          <li onClick={() => handleNavigationClick('portfolio')}>Portfolio</li>
-          <li onClick={() => handleNavigationClick('contact')}>Contact Me</li>
-          <li onClick={() => handleNavigationClick('resume')}>Resume</li>
-        </ul>
-      </nav>
-    
+      <Header currentPage={currentPage} handleNavigationClick={handleNavigationClick} />
       <main>
         {CurrentComponent && <CurrentComponent />}
       </main>
-      
     </div>
   );
 };
