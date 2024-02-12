@@ -14,21 +14,19 @@ function About() {
 
     
       <p>
-                    I'm Chris Johnson, an avid RPG enthusiast with an unwavering passion for virtual adventures and a
-                    profound love for anime. My favorite anime hands down is the long-running anime series "One Piece,"
-                    a journey
-                    I've been on since 2009.
+Greetings,<br /><br />
 
-                    In my professional life, I've dedicated countless hours to self-learning VBA scripting, and as a
-                    result, I've excelled in both VBA coding and, more recently, data analytics. Notably, I proudly
-                    achieved an impressive average score of 102 during a rigorous six-month bootcamp at the University
-                    of Minnesota. Currently, I'm eagerly pursuing another demanding bootcamp program at the same
-                    prestigious university, this time diving deep into FullStack coding.
+I am Chris Johnson, a dedicated RPG enthusiast with a profound love for virtual adventures and a deep-rooted passion for anime, and a new found passion for coding. <br />Among the myriad of captivating anime series, "One Piece" holds a special place in my heart, a journey I've been immersed in since 2009.<br /><br />
 
-                    The prospect of venturing into the dynamic field of web design is very exciting to me. In my
-                    portfolio below, you'll discover samples of my work spanning HTML, CSS, Javascript, and Data
-                    Analytics, showcasing some of my diverse skill set. Please feel free to explore and get in
-                    touch—I'm always eager to collaborate and take on new challenges.</p>
+In my professional endeavors, I have committed countless hours to self-learning VBA scripting, culminating in proficient expertise in both VBA coding and analysis. I started learning the visual aspect of Excel and VBA which lead me to Data Analytics. <br />My pursuit of excellence led me to attain an outstanding average score of 102 during an intensive six-month bootcamp at the esteemed University of Minnesota. <br />Currently, I am enthusiastically engaged in another challenging bootcamp program at the same reputable institution, delving into the intricacies of FullStack coding.<br />
+
+The dynamic field of web design beckons to me with its endless possibilities. <br /><br />In the domain of Data Analytics, I excel in Excel and VBA scripting, wield Python and its APIs adeptly, analyze data using Pandas, and navigate SQL databases like Postgres or MySQL with ease. <br />Additionally, my proficiency extends to JavaScript basics, Leaflet, Tableau, and delving into the realms of machine learning and AWS for big data solutions.<br /><br />
+
+In the domain of M.E.R.N app development, I command a versatile skill set including HTML, CSS, and JS, adeptly utilize various APIs, and have a solid foundation in object-oriented programming with Node.js and Express.js. <br />My knowledge extends to SQL databases like Postgres and <br /><br />MySQL, utilizing ORM techniques, and embracing the MVC architecture. Furthermore, I have experience in NoSQL databases like MongoDB and am well-versed in developing Progressive Web Applications (PWAs) with React.
+Within my portfolio, you will find a showcase of my work encompassing the skills I learned in Data Analytics and Full Stack Coding.
+
+Best regards,
+Chris Johnson</p>
     
   
     </main>
