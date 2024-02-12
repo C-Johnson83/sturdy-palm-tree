@@ -1,8 +1,15 @@
 import React from 'react';
+const mystyle = {
+  color: "black",
+  backgroundColor: "White",
+  padding: "10px",
+  fontFamily: "Arial"
+};
+
 
 function About() {
   return (
-    <main>
+    <main style={mystyle}>
       <h3>About Me</h3>
 
     
