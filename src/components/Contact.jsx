@@ -10,6 +10,7 @@ const mystyle = {
 function ContactMe() {
   const [email, setEmail] = useState(''); // State for email input
   const [phone, setPhone] = useState(''); // State for phone input
+  const [message, setMessage] = useState(''); // State for message input
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -21,12 +22,13 @@ function ContactMe() {
 
     setEmail(''); // Clear email input after submission
     setPhone(''); // Clear phone input after submission
+    setMessage(''); // Clear message input after submission
   };
 
   return (
     <main style={mystyle}>
       <div>
-        <h3>Contact Me</h3>
+        <h2>Contact Me</h2>
 
         <p>If you're on the lookout for someone who's not only well-versed in Excel and proficient in data
           analytics but also skilled in web design, or if you simply have professional aspirations you'd like
@@ -38,7 +40,7 @@ function ContactMe() {
       <section id="contact">
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email">Enter Your Email:</label> 
+            <label htmlFor="email">Enter Your Email:</label>
             <input
               type="email"
               id="email"
@@ -57,7 +59,16 @@ function ContactMe() {
               required
             />
           </div>
-          <button type="submit">Submit</button> 
+          <div className="message">
+            <label htmlFor="message">Enter Your Message:</label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>

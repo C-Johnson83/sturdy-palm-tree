@@ -49,7 +49,19 @@ button {
   border-color: black;
   border-width: 5px;
 }
+#contact {
+  display: flex;
+  justify-content: center;
+}
 
+label{
+  display: flex;
+  margin: 10px;
+}
+
+#message {
+  height: 200px;
+}
 /* Styles for the unordered lists */
 ul {
   display: flex;

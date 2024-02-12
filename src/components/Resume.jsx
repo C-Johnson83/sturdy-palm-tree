@@ -8,6 +8,7 @@ const mystyle = {
 function Resume() {
     return (
         <main style={mystyle}>
+            <h2>My Resume</h2>
             <p>
                 Data Analytics <br />--------------------</p>
             <ol>

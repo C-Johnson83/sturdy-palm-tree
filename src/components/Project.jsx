@@ -46,18 +46,25 @@ function Project() {
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  const mystyle = {
+    color: "black",
+    backgroundColor: "White",
+    padding: "10px",
+    fontFamily: "Arial"
+  };
+
   return (
     <section className="box" id="app-card">
-      <h2>Repo's</h2>
+      <h2 style={mystyle}>Repo's</h2>
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
             <figure className="imgRow">
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 {repoHasImage(repo) ? (
-                  <img src={`src/assets/images/${repo.name}.jpg`} alt={`${repo.name} image`} />
+                  <img src={`src/assets/images/${repo.name}`} alt={`${repo.name} image`} />
                 ) : (
-                  <h3>No Image</h3>
+                  <h3>No Image Available</h3>
                 )}
                 <h3>{repo.name}</h3>
               </a>
@@ -98,11 +105,12 @@ function Pagination({ reposPerPage, totalRepos, paginate }) {
 
 function repoHasImage(repo) {
   try {
-    require(`../assets/images/${repo.name}.jpg`);
+    require(`src/assets/images/${repo.name}.PNG`);
     return true;
   } catch (error) {
     return false;
   }
 }
+
 
 export default Project;

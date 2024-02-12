@@ -7,7 +7,7 @@ const Header = ({ handleNavigationClick }) => {
     <header>
       <section className="hName">
 
-        <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" /><h1>I am Chris Johnson</h1>
+        <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" /><h1>Chris Johnson "a.k.a" Chrispy</h1>
       </section>
       {/* Use the Navigation component inside the header */}
       <Navigation handleNavigationClick={handleNavigationClick} />
