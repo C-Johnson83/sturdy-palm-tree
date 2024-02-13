@@ -14,4 +14,5 @@ const Navigation = ({ handleNavigationClick }) => {
   );
 };
 
+
 export default Navigation;
