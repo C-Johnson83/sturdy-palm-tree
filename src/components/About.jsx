@@ -13,7 +13,7 @@ function About() {
       <h3>About Me</h3>
 
     
-      <p>
+      <p className='para'>
 Greetings,<br /><br />
 
 I am Chris Johnson, a dedicated RPG enthusiast with a profound love for virtual adventures and a deep-rooted passion for anime, and a new found passion for coding. <br />Among the myriad of captivating anime series, "One Piece" holds a special place in my heart, a journey I've been immersed in since 2009.<br /><br />

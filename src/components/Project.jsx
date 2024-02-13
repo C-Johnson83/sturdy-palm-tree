@@ -83,18 +83,22 @@ function Project() {
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+            <div>
               {repo.name in repoImages ? (
-                <img src={repoImages[repo.name]} alt={`${repo.name} image`} className='cardImg' />
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                  <img src={repoImages[repo.name]} alt={`${repo.name} image`} className='cardImg' />
+                </a>
               ) : (
-                <>
-                  <h3>No Image Available</h3>
-                </>
+                <h3>No Image Available</h3>
               )}
-              <h3>{repo.name}</h3>
-              <h4>{repo.description}</h4>
-              <h4>created on<br /> {repo.created_at}</h4>
-            </a>
+              <h3>
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                  {repo.name}
+                </a>
+              </h3>
+              <p>{repo.description}</p>
+              <p>created on<br /> {repo.created_at}</p>
+            </div>
           </div>
         ))}
       </div>
