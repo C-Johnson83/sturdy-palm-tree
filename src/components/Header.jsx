@@ -1,6 +1,6 @@
 // Header.js
 import React from 'react';
-import Navigation from './Navigation'; // Import the Navigation component
+import Navigation from './navigation'; // Import the Navigation component
 
 const Header = ({ handleNavigationClick }) => {
   return (
