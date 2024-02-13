@@ -6,7 +6,7 @@ function Project() {
   const reposPerPage = 6;
 
   const repoImages = {
-      'break-time': 'src/assets/images/clock.PNG',
+    'break-time': 'src/assets/images/clock.PNG',
     'prework-study-guide': 'src/assets/images/study.PNG',
     'fs-module-1-challenge': 'src/assets/images/challenge1.PNG',
     'belly-button-challenge': 'src/assets/images/belly-button-challenge.PNG',
@@ -30,9 +30,9 @@ function Project() {
     'super-broccoli': 'src/assets/images/pwa.PNG',
     'cautious-chainsaw': 'src/assets/images/socialMediaAPI.PNG',
     '': 'src/assets/images/',
-   };
+  };
 
-   useEffect(() => {
+  useEffect(() => {
     // Fetch repositories from both page 1 and page 2
     Promise.all([
       fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=1'),
@@ -53,7 +53,7 @@ function Project() {
         console.error('Error fetching repos:', error);
       });
   }, []);
-  
+
 
 
 
@@ -75,29 +75,26 @@ function Project() {
   return (
     <section className="box" id="app-card">
       <h2 style={mystyle}>Repo's</h2>
-        <Pagination
-          reposPerPage={reposPerPage}
-          totalRepos={repos.length}
-          paginate={paginate}
-        />
+      <Pagination
+        reposPerPage={reposPerPage}
+        totalRepos={repos.length}
+        paginate={paginate}
+      />
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
-            <figure className="imgRow">
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
               {repo.name in repoImages ? (
-                  <img src={repoImages[repo.name]} alt={`${repo.name} image`} className='cardImg'/>
-                ) : (
-                  <h3>No Image Available</h3>,
-                  <h4>{repo.description}</h4>,
-                  <h4>created on<br /> {repo.created_at}</h4>
-                )}
-                <h3>{repo.name}</h3>
-                <h4>{repo.description}</h4>
-                <h4>created on<br /> {repo.created_at}</h4>
-
-              </a>
-            </figure>
+                <img src={repoImages[repo.name]} alt={`${repo.name} image`} className='cardImg' />
+              ) : (
+                <>
+                  <h3>No Image Available</h3>
+                </>
+              )}
+              <h3>{repo.name}</h3>
+              <h4>{repo.description}</h4>
+              <h4>created on<br /> {repo.created_at}</h4>
+            </a>
           </div>
         ))}
       </div>
