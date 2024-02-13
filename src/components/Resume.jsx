@@ -10,37 +10,37 @@ function Resume() {
         <main style={mystyle}>
             <h2>My Resume</h2>
             <p>
-                Data Analytics <br />--------------------</p>
-            <ol>
-                <li>Excel</li>
-                <li>VBA Scripting</li>
-                <li>Python</li>
-                <li>Python API's</li>
-                <li>Data Analysis Pandas</li>
-                <li>SQL: Postgres</li>
-                <li>NoSQL Databases: MongoDB</li>
-                <li>JavaScript Basics</li>
-                <li>Leaflet</li>
-                <li>Tableau</li>
-                <li>Machine Learning</li>
-                <li>Big Data: AWS (Amazon Web Service)</li>
-            </ol>
+                Data Analytics and Visualization<br />---------------------------------------------<br />
+          
+                Excel<br />
+                VBA Scripting<br />
+                Python<br />
+                Python API's<br />
+                Data Analysis Pandas<br />
+                SQL: Postgres<br />
+                NoSQL Databases: MongoDB<br />
+                JavaScript Basics<br />
+                Leaflet<br />
+                Tableau<br />
+                Machine Learning<br />
+                Big Data: AWS (Amazon Web Service)
+                </p>
             <p>
-                M.E.R.N App Development<br />--------------------</p>
-                <ol>
-                <li>HTML, CSS, JS</li>
-                <li>API's: Web, Third Party, Server Side</li>
-                <li>Node.js</li>
-                <li>OOP: Object-oriented programming</li>
-                <li>Express.js</li>
-                <li>SQL: Mysql</li>
-                <li>ORM: Object–relational mapping</li>
-                <li>MVC: Model–View–Controller </li>
-                <li>Computer Science Introduction</li>
-                <li>NoSQL: MongoDB, Mongoose</li>
-                <li>PWA: Progressive Web Applications</li>
-                <li>React</li>
-            </ol>
+                M.E.R.N Application Development<br />-------------------------------------------------<br />
+            
+                HTML, CSS, JS<br />
+                API's: Web, Third Party, Server Side<br />
+                Node.js<br />
+                OOP: Object-oriented programming<br />
+                Express.js<br />
+                SQL: Mysql<br />
+                ORM: Object–relational mapping<br />
+                MVC: Model–View–Controller <br />
+                Computer Science Introduction<br />
+                NoSQL: MongoDB, Mongoose<br />
+                PWA: Progressive Web Applications<br />
+                React<br />
+                </p>
          
         </main>
     )

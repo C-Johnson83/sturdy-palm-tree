@@ -5,14 +5,14 @@ function Footer() {
 <footer>
 <ul className="contactLinks">
 <li>
-  <h4>Email:<a href="https://gmail.com" target="_blank">Chrisj21283gmail.com</a></h4>
+  <h3>Email:<a href="https://gmail.com" target="_blank">Chrisj21283gmail.com</a></h3>
 </li>
 <li>
-  <h4>Linkden:<a href="https://linkedin.com/in/chris-johnson-aa5b8827a">Chris Johnson</a></h4>
+  <h3>Linkdin:<a href="https://linkedin.com/in/chris-johnson-aa5b8827a">Chris Johnson</a></h3>
 </li>
 <li>
-  <h4>GitHub User Name:<a href="https://github.com/C-Johnson83" target="_blank">C-Johnson83</a>
-  </h4>
+  <h3>GitHub:<a href="https://github.com/C-Johnson83" target="_blank">C-Johnson83</a>
+  </h3>
 </li>
 </ul>
 </footer>

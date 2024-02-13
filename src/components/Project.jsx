@@ -5,20 +5,34 @@ function Project() {
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 6;
 
-  // useEffect(() => {
-  //   fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=1')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setRepos(data);
-  //       console.log(data)
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching repos:', error);
-  //     });
-  // }, []);
+  const repoImages = {
+      'break-time': 'src/assets/images/clock.PNG',
+    'prework-study-guide': 'src/assets/images/study.PNG',
+    'fs-module-1-challenge': 'src/assets/images/challenge1.PNG',
+    'belly-button-challenge': 'src/assets/images/belly-button-challenge.PNG',
+    'leaflet-challenge': 'src/assets/images/leaflet.PNG',
+    'weather-app': 'src/assets/images/Weather.PNG',
+    'game': 'src/assets/images/RPS.PNG',
+    'portfolio': 'src/assets/images/firstPortfolio.PNG',
+    'passGen': 'src/assets/images/PassGen.PNG',
+    'codeQuiz': 'src/assets/images/Code Quiz.PNG',
+    'scheduler': 'src/assets/images/scheduler.PNG    ',
+    'bards_instrument': 'src/assets/images/MyDashboard.PNG',
+    'trip_planner': 'src/assets/images/explore.png',
+    'upgraded-parakeet': 'src/assets/images/logo.PNG',
+    'html-challenge': 'src/assets/images/Daily MinTemp.jpeg',
+    'Group3': 'src/assets/images/hateCrimes.jpeg',
+    'VBA-challenge': 'src/assets/images/VBA-challenge sheet 2018.PNG',
+    'supreme-bassoon': 'src/assets/images/makeReadme.PNG',
+    'studious-telegram': 'src/assets/images/EcomBackEnd.PNG',
+    'the-three-amigos': 'src/assets/images/printHub.PNG',
+    'urban-spork': 'src/assets/images/noteTaker.PNG',
+    'super-broccoli': 'src/assets/images/pwa.PNG',
+    'cautious-chainsaw': 'src/assets/images/socialMediaAPI.PNG',
+    '': 'src/assets/images/',
+   };
 
-
-  useEffect(() => {
+   useEffect(() => {
     // Fetch repositories from both page 1 and page 2
     Promise.all([
       fetch('https://api.github.com/users/c-johnson83/repos?sort=created&page=1'),
@@ -28,13 +42,18 @@ function Project() {
       .then(data => {
         // Concatenate the repositories from both pages
         const allRepos = data[0].concat(data[1]);
-        setRepos(allRepos);
-        console.log(allRepos);
+        const repoDates = allRepos.map(repo => ({
+          ...repo,
+          created_at: repo.created_at.split('T')[0] // Extracting only the date part
+        }));
+        setRepos(repoDates);
+        console.log(repoDates);
       })
       .catch(error => {
         console.error('Error fetching repos:', error);
       });
   }, []);
+  
 
 
 
@@ -56,27 +75,32 @@ function Project() {
   return (
     <section className="box" id="app-card">
       <h2 style={mystyle}>Repo's</h2>
+        <Pagination
+          reposPerPage={reposPerPage}
+          totalRepos={repos.length}
+          paginate={paginate}
+        />
       <div className='card-container'>
         {currentRepos.map(repo => (
           <div key={repo.id} className="card">
             <figure className="imgRow">
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                {repoHasImage(repo) ? (
-                  <img src={`src/assets/images/${repo.name}`} alt={`${repo.name} image`} />
+              {repo.name in repoImages ? (
+                  <img src={repoImages[repo.name]} alt={`${repo.name} image`} className='cardImg'/>
                 ) : (
-                  <h3>No Image Available</h3>
+                  <h3>No Image Available</h3>,
+                  <h4>{repo.description}</h4>,
+                  <h4>created on<br /> {repo.created_at}</h4>
                 )}
                 <h3>{repo.name}</h3>
+                <h4>{repo.description}</h4>
+                <h4>created on<br /> {repo.created_at}</h4>
+
               </a>
             </figure>
           </div>
         ))}
       </div>
-      <Pagination
-        reposPerPage={reposPerPage}
-        totalRepos={repos.length}
-        paginate={paginate}
-      />
     </section>
   );
 }
@@ -89,7 +113,7 @@ function Pagination({ reposPerPage, totalRepos, paginate }) {
   }
 
   return (
-    <nav>
+    <nav className='pagNav'>
       <ul className='pagination'>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
@@ -103,14 +127,6 @@ function Pagination({ reposPerPage, totalRepos, paginate }) {
   );
 }
 
-function repoHasImage(repo) {
-  try {
-    require(`src/assets/images/${repo.name}.PNG`);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
 
 
 export default Project;

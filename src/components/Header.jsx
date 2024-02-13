@@ -5,14 +5,22 @@ import Navigation from './Navigation'; // Import the Navigation component
 const Header = ({ handleNavigationClick }) => {
   return (
     <header>
-      <section className="hName">
-
-        <img src="src\assets\images\me.jpg" className="me" alt="Chris Johnson" /><h1>Chris Johnson "a.k.a" Chrispy</h1>
-      </section>
+      <section className="avatarArea">
+        <img src="src\assets\images\me.jpg" className="avatar" alt="Chris Johnson" /> 
+        <h1>Chris Johnson<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.k.a<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chrispy!</h1>
+       
+    
       {/* Use the Navigation component inside the header */}
       <Navigation handleNavigationClick={handleNavigationClick} />
+      </section>
+      
     </header>
   );
 };
 
+
+
 export default Header;
+
+
