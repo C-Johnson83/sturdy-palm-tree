@@ -24,7 +24,7 @@ main {
 
 /* Header and Navigation */
 header {
-background-image: url(src/assets/images/weird.jpg);
+background-image: url(../public/assets/images/weird.jpg);
 background-size: cover;
 }
 .headNav {
