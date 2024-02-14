@@ -6,7 +6,7 @@ const Header = ({ handleNavigationClick }) => {
   return (
     <header>
       <section className="avatarArea">
-        <img src="../../public\assets\images\me.jpg" className="avatar" alt="Chris Johnson" /> 
+        <img src="/assets/images/me.jpg" className="avatar" alt="Chris Johnson" /> 
         <h1>Chris Johnson<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.k.a<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chrispy!</h1>
        
