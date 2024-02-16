@@ -25,6 +25,11 @@ function ContactMe() {
     setMessage(''); // Clear message input after submission
   };
 
+  // Function to handle clicking the link
+  const handleLinkClick = () => {
+    window.location.href = "mailto:chrisj21283@gmail.com";
+  };
+
   return (
     <main style={mystyle}>
       <div>
@@ -69,6 +74,8 @@ function ContactMe() {
             />
           </div>
           <button type="submit">Submit</button>
+          <p>Alternative method to email me directly</p>
+          <button type="button" class='alt' onClick={handleLinkClick}>Create Email</button>
         </form>
       </section>
     </main>

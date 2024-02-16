@@ -41,7 +41,9 @@ footer {
   color: #ffffff;
   max-height: 10%;
 }
-
+footer ul li{
+  padding:10px;
+}
 /* Buttons */
 button {
   display: flex;
@@ -72,7 +74,9 @@ label {
 #message {
   height: 200px;
 }
-
+.alt {
+  color:white;
+}
 /* Link Names */
 .linkName {
   display: flex;

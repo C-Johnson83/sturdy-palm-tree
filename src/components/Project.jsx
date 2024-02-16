@@ -29,6 +29,7 @@ function Project() {
     'urban-spork': '/assets/images/noteTaker.PNG',
     'super-broccoli': '/assets/images/pwa.PNG',
     'cautious-chainsaw': '/assets/images/socialMediaAPI.PNG',
+    'sturdy-palm-tree': '/assets/images/react.PNG',
     };
 
   useEffect(() => {

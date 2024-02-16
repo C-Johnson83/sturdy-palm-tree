@@ -13,6 +13,8 @@ The task is to create a portfolio, leveraging React skills to help individuals s
 - [Acceptance Criteria](#acceptance-criteria)
 - [Features](#features)
 - [License](#license)
+- [Screenshot](#screenshot)
+- [Deployed Application](#deployed-application)
 
 ## User Story
 AS AN employer looking for candidates with experience building single-page applications  
@@ -80,3 +82,8 @@ License Link
 https://opensource.org/licenses/MIT   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
 
+## Screenshot
+![react portfolio](public/assets/images/react.PNG)
+
+## Deployed Application
+https://reactportfolio-bk5m.onrender.com/

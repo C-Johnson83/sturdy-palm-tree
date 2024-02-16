@@ -5,7 +5,7 @@ function Footer() {
 <footer>
 <ul className="contactLinks">
 <li>
-  <h3>Email:<a href="https://gmail.com" target="_blank">Chrisj21283gmail.com</a></h3>
+  <h3>Stackoverflow:<a href="https://stackoverflow.com/users/20463867/chrispy83?tab=profile" target="_blank">Chrispy83</a></h3>
 </li>
 <li>
   <h3>Linkdin:<a href="https://linkedin.com/in/chris-johnson-aa5b8827a">Chris Johnson</a></h3>
